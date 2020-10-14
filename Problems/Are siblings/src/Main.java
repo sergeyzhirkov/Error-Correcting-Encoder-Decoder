@@ -1,3 +1,4 @@
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,5 +22,13 @@ class Siblings {
         Collections.sort(arrayList);
         System.out.println(arrayList.get(arrayList.size() - 1));
         scanner.close();
+        int[] message = new int[] {114, 101, 97, 100, 32, 97, 98, 111, 117, 116, 32, 65, 83, 67, 73, 73};
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        for (int code : message) {
+            outputStream.write(code);
+        }
+
+        System.out.println(outputStream.toString());
     }
 }
