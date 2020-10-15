@@ -9,8 +9,10 @@ public class Interference {
 
     private void toInterference() {
         for (int i = 0; i < sb.length(); i++) {
-            if (i % 3 == 0) {
+            if (sb.charAt(i) % 2 == 0) {
                 sb.setCharAt(i, (char) (sb.charAt(i) + 1));
+            } else {
+                sb.setCharAt(i, (char) (sb.charAt(i) - 1));
             }
         }
     }
